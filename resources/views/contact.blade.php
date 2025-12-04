@@ -5,21 +5,6 @@
 
 @section('content')
     <!-- Page Header -->
-    {{-- <section class="page-header" style="background-image: url('{{ asset('events/event03.jpg') }}')">
-        <div class="page-header-overlay"></div>
-        <div class="section">
-            <div class="page-header-content" data-aos="fade-up">
-                <h1 class="page-title" style="font-family:'Playfair Display',serif;font-size:2.6rem;color:#fff;margin-bottom:8px;">
-                    Contact Us
-                </h1>
-                <div class="breadcrumb" style="font-size:0.9rem;color:rgba(255,255,255,0.8);display:flex;align-items:center;gap:6px;">
-                    <a href="{{ route('home') }}" style="color:#fff;">Home</a>
-                    <span>/</span>
-                    <span>Contact</span>
-                </div>
-            </div>
-        </div>
-    </section> --}}
 
     <!-- Contact Info Section -->
     <section class="contact-info-section section-padding" style="background:#ffffff;">
@@ -133,7 +118,7 @@
                                 </a>
                             </li>
                             <li style="margin-bottom:4px;">
-                                <a href="{{ route('events') }}" style="color:#3b1a12;display:inline-flex;align-items:center;gap:6px;">
+                                <a href="{{ route('functions') }}" style="color:#3b1a12;display:inline-flex;align-items:center;gap:6px;">
                                     <i class="fas fa-calendar-alt"></i> Event Bookings
                                 </a>
                             </li>
@@ -173,7 +158,7 @@
 
                 <!-- Form -->
                 <div class="contact-form-container" data-aos="fade-left">
-                    <form action="{{ route('api.contact') }}" method="POST" class="contact-form" id="contactForm" data-validate="true" style="background:#ffffff;border-radius:18px;padding:20px 18px;box-shadow:0 16px 45px rgba(0,0,0,0.06);">
+                    <form action="{{ route('contact') }}" method="POST" class="contact-form" id="contactForm" data-validate="true" style="background:#ffffff;border-radius:18px;padding:20px 18px;box-shadow:0 16px 45px rgba(0,0,0,0.06);">
                         @csrf
                         
                         <div class="form-row" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;">

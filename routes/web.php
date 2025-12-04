@@ -2,19 +2,42 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\RoomController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\GalleryController;
 
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application.
+|
+*/
+
+// Static Pages
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/about', [PageController::class, 'about'])->name('about');
-Route::get('/rooms', [PageController::class, 'rooms'])->name('rooms');
 Route::get('/facilities', [PageController::class, 'facilities'])->name('facilities');
-Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
-Route::view('/restaurant', 'restaurant')->name('restaurant');
-Route::get('/testimonials', [PageController::class, 'testimonials'])->name('testimonials');
-Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
-Route::get('/events', [EventController::class, 'index'])->name('events');
+// Rooms
+Route::get('/rooms', [RoomController::class, 'index'])->name('rooms');
 
-// API Routes for booking form
-Route::post('/api/booking', [PageController::class, 'submitBooking'])->name('api. booking');
-Route::post('/api/contact', [PageController::class, 'submitContact'])->name('api.contact');
+// Gallery
+Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
+
+// Contact
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
+
+// Booking
+Route::post('/booking', [BookingController::class, 'submit'])->name('booking.submit');
+
+// Restaurant and Events pages
+Route::get('/restaurant', [PageController::class, 'restaurant'])->name('restaurant');
+
+Route::get('/functions', [PageController::class, 'functions'])->name('functions');
+
+

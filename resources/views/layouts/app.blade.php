@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+    <!-- Add this line in the <head> section, right after Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-rXnZK6t7fCJpB2W+g7YkPAySMW+R/7WTxaqpZkXc4ykaJb/GBPrly6ux/Y9mkjiE1jA6U0D0J6M4bVR7i9HQWA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -86,7 +89,7 @@ header {
 .lux-logo {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 15px;
 }
 
 .lux-logo img {
@@ -105,7 +108,7 @@ header {
 
 .lux-logo-text .brand-primary {
     font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
+    font-size: 1.0rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     font-weight: 700;
@@ -195,12 +198,12 @@ header {
     border: none;
     color: #fff;
     font-size: 1.4rem;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .nav-mobile {
     display: none;
-    background: rgba(34, 13, 8, 0.98);
+    background: rgba(37, 11, 5, 0.98);
     border-top: 1px solid rgba(255,255,255,0.08);
     backdrop-filter: blur(24px);
 }
@@ -627,13 +630,46 @@ footer {
     }
 }
 
+/* Mobile Toggle Button */
+.nav-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    display: none;
+    padding: 10px 14px;
+    transition: all var(--transition-fast);
+    font-size: 0;
+}
+
+/* Bootstrap Icon - White and Visible */
+.nav-toggle i {
+    color: #ffffff !important;
+    font-size: 1.8rem ! important;
+    display: inline-block;
+}
+
+. nav-toggle:hover i {
+    color: var(--color-accent);
+    transform: scale(1. 15);
+}
+
+. nav-toggle:active {
+    transform: scale(0. 95);
+}
+
+/* Show only on mobile */
+@media (max-width: 992px) {
+    .nav-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 @media (max-width: 800px) {
     .nav-desktop {
         display: none;
-    }
-
-    .nav-toggle {
-        display: inline-flex;
     }
 
     .hero {
@@ -648,13 +684,113 @@ footer {
         padding: 80px 0 40px;
     }
 
-    .hero-inner {
+    . hero-inner {
         min-height: auto;
     }
 
     .section {
         padding: 52px 6% 48px;
     }
+    
+    .nav-toggle i {
+        font-size: 1.6rem ! important;
+    }
+
+    /* Mobile-only adjustments */
+@media (max-width: 768px) {
+    .hero-inner {
+        grid-template-columns: 1fr ! important;
+        gap: 20px !important;
+    }
+
+    /* Hide Tailored Stay card on mobile */
+    .hero-floating-card {
+        display: none !important;
+    }
+
+    /* Center content on mobile */
+    .hero h1 {
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        text-align: center;
+    }
+
+    . hero-badge {
+        justify-content: center;
+    }
+
+    . hero-meta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-meta-item {
+        justify-content: center;
+    }
+
+    /* Stack buttons on mobile */
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-lux,
+    .btn-ghost {
+        width: 90%;
+        justify-content: center;
+    }
+
+    /* Reduce font sizes on mobile */
+    .hero-badge span {
+        font-size: 0.75rem;
+    }
+
+    . hero h1 {
+        font-size: clamp(1.7rem, 3vw, 2.2rem) !important;
+    }
+
+    .hero-subtitle {
+        font-size: 0.6rem;
+    }
+
+    .hero-meta-item {
+        font-size: 0.85rem;
+    }
+
+    . btn-lux,
+    .btn-ghost {
+        font-size: 0. 85rem;
+        padding: 10px 16px ! important;
+    }
+}
+
+@media (max-width: 480px) {
+    . hero {
+        padding: 50px 0 !important;
+    }
+
+    .hero-inner {
+        padding: 0 4% !important;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.5rem, 4vw, 2. 2rem) !important;
+    }
+
+    .hero-subtitle {
+        font-size: 0. 9rem;
+    }
+
+    .hero-meta {
+        gap: 10px;
+    }
+
+    . hero-actions {
+        gap: 8px;
+    }
+}
 }
     </style>
 </head>
@@ -663,33 +799,35 @@ footer {
     <header>
         <div class="lux-nav">
             <a href="{{ route('home') }}" class="lux-logo">
-                <img src="{{ asset('images/lodge-logo.png') }}" alt="Village Lodge Gweru Logo" />
+                <img src="{{ asset('village.png') }}" alt="Village Lodge Gweru Logo" />
                 <div class="lux-logo-text">
-                    <span class="brand-primary">Village Lodge Gweru</span>
-                    <span class="brand-secondary">A Curated Luxury Retreat</span>
+                    <span class="brand-primary">Village Lodges</span>
                 </div>
             </a>
-
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
+        
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
             </button>
-
+        
             <div class="nav-desktop">
                 <ul>
                     <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
                     <li><a href="{{ route('about') }}" class="{{ request()->routeIs('about') ? 'active' : '' }}">About</a></li>
                     <li><a href="{{ route('rooms') }}" class="{{ request()->routeIs('rooms') ? 'active' : '' }}">Rooms</a></li>
                     <li><a href="{{ route('restaurant') }}" class="{{ request()->routeIs('restaurant') ? 'active' : '' }}">Restaurant</a></li>
-                    <li><a href="{{ route('events') }}" class="{{ request()->routeIs('events') ? 'active' : '' }}">Events</a></li>
+                    <li><a href="{{ route('functions') }}" class="{{ request()->routeIs('functions') ? 'active' : '' }}">Events</a></li>
+                    <li><a href="{{ route('facilities') }}" class="{{ request()->routeIs('facilities') ? 'active' : '' }}">Facilities</a></li>
                     <li><a href="{{ route('gallery') }}" class="{{ request()->routeIs('gallery') ? 'active' : '' }}">Gallery</a></li>
                     <li><a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a></li>
                 </ul>
+                
                 <a href="{{ route('rooms') }}" class="nav-cta">
                     <i class="fas fa-calendar-check"></i>
                     <span>Book a Stay</span>
                 </a>
             </div>
         </div>
+        
 
         <div class="nav-mobile" id="mobileNav">
             <ul>
@@ -697,7 +835,8 @@ footer {
                 <li><a href="{{ route('about') }}">About</a></li>
                 <li><a href="{{ route('rooms') }}">Rooms</a></li>
                 <li><a href="{{ route('restaurant') }}">Restaurant</a></li>
-                <li><a href="{{ route('events') }}">Events</a></li>
+                <li><a href="{{ route('functions') }}">Events</a></li>
+                <li><a href="{{ route('facilities') }}">Facilities</a></li>
                 <li><a href="{{ route('gallery') }}">Gallery</a></li>
                 <li><a href="{{ route('contact') }}">Contact</a></li>
                 <li class="nav-mobile-cta">
@@ -740,7 +879,7 @@ footer {
         margin:0 auto;
         padding:0 5%;
         display:grid;
-        grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);
+        grid-template-columns:minmax(0,1. 35fr) minmax(0,1fr);
         gap:40px;
         align-items:center;
     ">
@@ -749,11 +888,11 @@ footer {
                 <i class="fas fa-star" style="color:#f3b01a;"></i>
                 <span style="color:#fdf8ef;">Signature Village Luxury • Gweru</span>
             </div>
-            <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.7rem,4vw,3.8rem);margin:0 0 14px;line-height:1.15;color:#ffffff;text-shadow:0 18px 45px rgba(0,0,0,0.8);">
-                Luxury. Comfort. <span style="color:#f3b01a;">Serenity.</span>
+            <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.7rem,4vw,3. 8rem);margin:0 0 14px;line-height:1.15;color:#ffffff;text-shadow:0 18px 45px rgba(0,0,0,0.8);">
+                Luxury.  Comfort. <span style="color:#f3b01a;">Serenity.</span>
             </h1>
             <p class="hero-subtitle" style="font-size:1.05rem;max-width:540px;opacity:0.96;margin-bottom:26px;color:#f0e4d6;">
-                Discover a sanctuary of timeless elegance set in the heart of Gweru. 
+                Discover a sanctuary of timeless elegance set in the heart of Gweru.  
                 Impeccable suites, curated gastronomy, and warm Zimbabwean hospitality 
                 crafted for discerning travelers, executives, and cherished celebrations.
             </p>
@@ -817,23 +956,23 @@ footer {
                     </div>
                 </div>
                 <div class="hero-floating-item" style="background:rgba(255,255,255,0.05);border-radius:14px;padding:10px 12px;border:1px solid rgba(255,255,255,0.1);">
-                    <div class="hero-floating-item-label" style="font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;opacity:0.7;color:#e6d5c2;">
+                    <div class="hero-floating-item-label" style="font-size:0. 7rem;letter-spacing:0.14em;text-transform:uppercase;opacity:0.7;color:#e6d5c2;">
                         Experience
                     </div>
                     <div class="hero-floating-item-value" style="font-size:0.88rem;font-weight:500;color:#ffffff;">
                         Business / Leisure
                     </div>
                 </div>
-                <div class="hero-floating-item" style="background:rgba(255,255,255,0.05);border-radius:14px;padding:10px 12px;border:1px solid rgba(255,255,255,0.1);">
-                    <div class="hero-floating-item-label" style="font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;opacity:0.7;color:#e6d5c2;">
+                <div class="hero-floating-item" style="background:rgba(255,255,255,0. 05);border-radius:14px;padding:10px 12px;border:1px solid rgba(255,255,255,0. 1);">
+                    <div class="hero-floating-item-label" style="font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;opacity:0. 7;color:#e6d5c2;">
                         Check-In
                     </div>
                     <div class="hero-floating-item-value" style="font-size:0.88rem;font-weight:500;color:#ffffff;">
                         Anytime | 14:00
                     </div>
                 </div>
-                <div class="hero-floating-item" style="background:rgba(255,255,255,0.05);border-radius:14px;padding:10px 12px;border:1px solid rgba(255,255,255,0.1);">
-                    <div class="hero-floating-item-label" style="font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;opacity:0.7;color:#e6d5c2;">
+                <div class="hero-floating-item" style="background:rgba(255,255,255,0. 05);border-radius:14px;padding:10px 12px;border:1px solid rgba(255,255,255,0. 1);">
+                    <div class="hero-floating-item-label" style="font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;opacity:0. 7;color:#e6d5c2;">
                         Exclusive Add-On
                     </div>
                     <div class="hero-floating-item-value" style="font-size:0.88rem;font-weight:500;color:#ffffff;">
@@ -883,7 +1022,7 @@ footer {
                 <h3>Discover</h3>
                 <p><a href="{{ route('rooms') }}"><i class="fas fa-bed"></i> Suites & Accommodation</a></p>
                 <p><a href="{{ route('restaurant') }}"><i class="fas fa-utensils"></i> Restaurant & Bar</a></p>
-                <p><a href="{{ route('events') }}"><i class="fas fa-champagne-glasses"></i> Events & Conferencing</a></p>
+                <p><a href="{{ route('functions') }}"><i class="fas fa-champagne-glasses"></i> Events & Conferencing</a></p>
                 <p><a href="{{ route('gallery') }}"><i class="fas fa-images"></i> Gallery</a></p>
             </div>
             <div class="footer-column">
@@ -902,16 +1041,32 @@ footer {
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script>
-        // Mobile nav toggle
         document.addEventListener('DOMContentLoaded', function () {
-            const toggle = document.querySelector('.nav-toggle');
+            const toggle = document. getElementById('navToggle');
             const mobileNav = document.getElementById('mobileNav');
-
+    
             if (toggle && mobileNav) {
-                toggle.addEventListener('click', function () {
+                toggle.addEventListener('click', function (e) {
+                    e.preventDefault();
                     const isOpen = mobileNav.style.display === 'block';
                     mobileNav.style.display = isOpen ? 'none' : 'block';
-                    toggle.innerHTML = isOpen ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
+                    
+                    // Toggle icon between list and close
+                    const icon = toggle.querySelector('i');
+                    if (isOpen) {
+                        icon.className = 'bi bi-list';
+                    } else {
+                        icon.className = 'bi bi-x-lg';
+                    }
+                });
+    
+                // Close mobile menu when a link is clicked
+                const mobileLinks = mobileNav.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', function () {
+                        mobileNav. style.display = 'none';
+                        toggle.querySelector('i').className = 'bi bi-list';
+                    });
                 });
             }
         });

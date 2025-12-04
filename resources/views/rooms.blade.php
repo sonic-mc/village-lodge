@@ -175,10 +175,10 @@
     </section>
 
     <!-- Booking CTA Section -->
-    <section class="booking-cta-section" style="position:relative;padding:70px 0;background:url('{{ asset('images/image02.jpg') }}') center/cover no-repeat;">
-        <div class="booking-cta-overlay" style="position:absolute;inset:0;background:rgba(15,4,2,0.9);"></div>
+    <section class="booking-cta-section" style="position:relative;padding:70px 0;background:url('{{ asset('images/image03.jpg') }}') center/cover no-repeat;">
+        {{-- <div class="booking-cta-overlay" style="position:absolute;inset:0;background:rgba(15,4,2,0.9);"></div> --}}
         <div class="section" style="position:relative;">
-            <div class="booking-cta-content" data-aos="zoom-in" style="text-align:center;color:#fff;max-width:720px;margin:0 auto;">
+            <div class="booking-cta-content" data-aos="zoom-in" style="text-align:center;color:#f6f5f2;max-width:720px;margin:0 auto;">
                 <h2 class="booking-cta-title" style="font-family:'Playfair Display',serif;font-size:2.1rem;margin:0 0 10px;">
                     Ready to Book Your Stay?
                 </h2>

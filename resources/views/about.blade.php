@@ -220,7 +220,7 @@
 
     <!-- Statistics Section -->
     <section class="statistics-section" style="position:relative;padding:70px 0;background:url('{{ asset('images/image06.jpg') }}') center/cover no-repeat;">
-        <div class="statistics-overlay" style="position:absolute;inset:0;background:rgba(15,4,2,0.92);"></div>
+        {{-- <div class="statistics-overlay" style="position:absolute;inset:0;background:rgba(15,4,2,0.92);"></div> --}}
         <div class="section" style="position:relative;">
             <div class="statistics-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;">
                 <div class="stat-item" data-aos="zoom-in" data-aos-delay="100" style="text-align:center;color:#fff;">
@@ -335,7 +335,7 @@
 
     <!-- CTA Section -->
     <section class="cta-section" style="position:relative;padding:70px 0;background:url('{{ asset('events/event01.jpg') }}') center/cover no-repeat;">
-        <div class="cta-overlay" style="position:absolute;inset:0;background:rgba(15,4,2,0.9);"></div>
+        {{-- <div class="cta-overlay" style="position:absolute;inset:0;background:rgba(15,4,2,0.9);"></div> --}}
         <div class="section" style="position:relative;text-align:center;color:#fff;">
             <div class="cta-content" data-aos="fade-up">
                 <h2 class="cta-title" style="font-family:'Playfair Display',serif;font-size:2.2rem;margin:0 0 10px;">

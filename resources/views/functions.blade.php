@@ -5,21 +5,7 @@
 
 @section('content')
     <!-- Page Header -->
-    <section class="page-header" style="background-image: url('{{ asset('events/event01.jpg') }}')">
-        <div class="page-header-overlay"></div>
-        <div class="section">
-            <div class="page-header-content" data-aos="fade-up">
-                <h1 class="page-title" style="font-family:'Playfair Display',serif;font-size:2.6rem;color:#fff;margin-bottom:8px;">
-                    Events &amp; Functions
-                </h1>
-                <div class="breadcrumb" style="font-size:0.9rem;color:rgba(255,255,255,0.8);display:flex;align-items:center;gap:6px;">
-                    <a href="{{ route('home') }}" style="color:#fff;">Home</a>
-                    <span>/</span>
-                    <span>Events</span>
-                </div>
-            </div>
-        </div>
-    </section>
+ 
 
     <!-- Events Intro -->
     <section class="events-intro-section section-padding" style="background:#ffffff;">
@@ -273,8 +259,8 @@
     </section>
 
     <!-- Events CTA -->
-    <section class="events-cta-section" style="position:relative;padding:70px 0;background:url('{{ asset('events/event08.jpg') }}') center/cover no-repeat;">
-        <div class="events-cta-overlay" style="position:absolute;inset:0;background:rgba(15,4,2,0.9);"></div>
+    <section class="events-cta-section" style="position:relative;padding:70px 0;background:url('{{ asset('events/event03.jpg') }}') center/cover no-repeat;">
+        {{-- <div class="events-cta-overlay" style="position:absolute;inset:0;background:rgba(197, 176, 172, 0.9);"></div> --}}
         <div class="section" style="position:relative;">
             <div class="events-cta-content" data-aos="zoom-in" style="text-align:center;color:#fff;max-width:720px;margin:0 auto;">
                 <h2 class="events-cta-title" style="font-family:'Playfair Display',serif;font-size:2.1rem;margin:0 0 10px;">
