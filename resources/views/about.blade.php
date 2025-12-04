@@ -5,14 +5,14 @@
 
 @section('content')
     <!-- Page Header -->
-    <section class="page-header" style="background-image: url('{{ asset('images/image01.jpg') }}')">
+    <section class="page-header" style="background-image: url('{{ asset('images/image01.jpg') }}'); background-attachment: fixed;">
         <div class="page-header-overlay"></div>
         <div class="section">
             <div class="page-header-content" data-aos="fade-up">
-                <h1 class="page-title" style="font-family:'Playfair Display',serif;font-size:2.6rem;color:#fff;margin-bottom:8px;">
+                <h1 class="page-title" style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem, 5vw, 2. 6rem);color:#fff;margin-bottom:8px;">
                     About The Village Lodge
                 </h1>
-                <div class="breadcrumb" style="font-size:0.9rem;color:rgba(255,255,255,0.8);display:flex;align-items:center;gap:6px;">
+                <div class="breadcrumb" style="font-size:clamp(0.85rem, 2vw, 0.9rem);color:rgba(255,255,255,0.8);display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center;">
                     <a href="{{ route('home') }}" style="color:#fff;">Home</a>
                     <span>/</span>
                     <span>About Us</span>
@@ -22,9 +22,9 @@
     </section>
 
     <!-- About Story Section -->
-    <section class="about-story-section section-padding" style="background:#ffffff;">
+    <section class="about-story-section section-padding" style="background:#ffffff;padding:60px 0;">
         <div class="section">
-            <div class="about-story-grid" style="display:grid;grid-template-columns:minmax(0,1.1fr)minmax(0,1.2fr);gap:40px;align-items:center;">
+            <div class="about-story-grid" style="display:grid;grid-template-columns:minmax(0,1. 1fr) minmax(0,1.2fr);gap:40px;align-items:center;">
                 <div class="about-story-image" data-aos="fade-right" style="position:relative;">
                     <div style="border-radius:20px;overflow:hidden;box-shadow:0 20px 48px rgba(0,0,0,0.18);">
                         <img src="{{ asset('images/image03.jpg') }}" alt="The Village Lodge Story" style="width:100%;display:block;object-fit:cover;">
@@ -33,7 +33,7 @@
                         <div class="badge-icon" style="font-size:1.2rem;color:#f3b01a;">
                             <i class="fas fa-award"></i>
                         </div>
-                        <div class="badge-text" style="font-size:0.85rem;line-height:1.3;">
+                        <div class="badge-text" style="font-size:clamp(0.75rem, 2vw, 0.85rem);line-height:1.3;">
                             <span style="display:block;opacity:0.8;">Excellence in</span>
                             <strong>Hospitality</strong>
                         </div>
@@ -41,36 +41,36 @@
                 </div>
 
                 <div class="about-story-content" data-aos="fade-left">
-                    <span class="section-subtitle" style="font-size:0.85rem;letter-spacing:0.25em;text-transform:uppercase;color:#3b1a12;opacity:0.8;">
+                    <span class="section-subtitle" style="font-size:clamp(0.75rem, 2vw, 0.85rem);letter-spacing:0.25em;text-transform:uppercase;color:#3b1a12;opacity:0.8;">
                         Our Story
                     </span>
-                    <h2 class="section-title" style="font-family:'Playfair Display',serif;font-size:2.1rem;margin:10px 0 8px;color:#3b1a12;">
+                    <h2 class="section-title" style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem, 4vw, 2.1rem);margin:10px 0 8px;color:#3b1a12;">
                         A Legacy of Authentic Zimbabwean Hospitality
                     </h2>
                     <div class="title-divider" style="width:60px;height:3px;background:#f3b01a;border-radius:999px;margin:10px 0 20px;"></div>
                     
-                    <p class="about-text" style="font-size:0.98rem;color:#555;line-height:1.8;margin-bottom:14px;">
+                    <p class="about-text" style="font-size:clamp(0.9rem, 2vw, 0.98rem);color:#555;line-height:1.8;margin-bottom:14px;">
                         Nestled on the serene Bonniebrae Farm just outside Gweru, The Village Lodge has been 
                         a cornerstone of Zimbabwean hospitality for over 15 years. Our journey began with a 
                         simple vision: to create a sanctuary where rustic African charm meets modern luxury.
                     </p>
                     
-                    <p class="about-text" style="font-size:0.98rem;color:#555;line-height:1.8;margin-bottom:14px;">
+                    <p class="about-text" style="font-size:clamp(0. 9rem, 2vw, 0.98rem);color:#555;line-height:1. 8;margin-bottom:14px;">
                         What started as a small collection of thatched chalets has blossomed into one of the 
                         Midlands' premier destinations for both business and leisure travelers. Each stone, 
                         each beam, and each carefully tended garden reflects our commitment to preserving 
                         authentic Zimbabwean architecture while providing world-class amenities.
                     </p>
                     
-                    <p class="about-text" style="font-size:0.98rem;color:#555;line-height:1.8;margin-bottom:18px;">
+                    <p class="about-text" style="font-size:clamp(0.9rem, 2vw, 0.98rem);color:#555;line-height:1.8;margin-bottom:18px;">
                         Today, The Village Lodge stands as a testament to our unwavering dedication to excellence.  
                         We've hosted countless weddings, corporate events, and family celebrations, each one 
-                        treated with the care and attention that has become our hallmark. 
+                        treated with the care and attention that has become our hallmark.  
                     </p>
 
-                    <div class="about-signature" style="display:flex;align-items:center;gap:12px;margin-top:10px;">
+                    <div class="about-signature" style="display:flex;align-items:center;gap:12px;margin-top:10px;flex-wrap:wrap;">
                         <img src="{{ asset('images/image10.jpg') }}" alt="Signature" style="height:44px;object-fit:contain;">
-                        <div class="signature-info" style="font-size:0.9rem;color:#444;">
+                        <div class="signature-info" style="font-size:clamp(0. 8rem, 2vw, 0.9rem);color:#444;">
                             <strong style="display:block;">Management Team</strong>
                             <span>The Village Lodge</span>
                         </div>
@@ -81,27 +81,27 @@
     </section>
 
     <!-- Mission & Vision Section -->
-    <section class="mission-vision-section section-padding bg-light" style="background:#f5f6f7;">
+    <section class="mission-vision-section section-padding bg-light" style="background:#f5f6f7;padding:60px 0;">
         <div class="section">
             <div class="section-header text-center" data-aos="fade-up">
-                <span class="section-subtitle" style="font-size:0.85rem;letter-spacing:0.25em;text-transform:uppercase;color:#3b1a12;opacity:0.8;">
+                <span class="section-subtitle" style="font-size:clamp(0.75rem, 2vw, 0.85rem);letter-spacing:0.25em;text-transform:uppercase;color:#3b1a12;opacity:0.8;">
                     Our Values
                 </span>
-                <h2 class="section-title" style="font-family:'Playfair Display',serif;font-size:2rem;margin:10px 0;color:#3b1a12;">
+                <h2 class="section-title" style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem, 4vw, 2rem);margin:10px 0;color:#3b1a12;">
                     Mission &amp; Vision
                 </h2>
                 <div class="title-divider center" style="width:60px;height:3px;background:#f3b01a;border-radius:999px;margin:10px auto 18px;"></div>
             </div>
 
-            <div class="mission-vision-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;">
+            <div class="mission-vision-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;">
                 <div class="mission-card" data-aos="flip-left" data-aos-delay="100" style="background:#ffffff;border-radius:18px;padding:26px 24px;box-shadow:0 18px 45px rgba(0,0,0,0.06);">
-                    <div class="mission-icon" style="font-size:2rem;color:#f3b01a;margin-bottom:10px;">
+                    <div class="mission-icon" style="font-size:clamp(1.6rem, 3vw, 2rem);color:#f3b01a;margin-bottom:10px;">
                         <i class="fas fa-bullseye"></i>
                     </div>
-                    <h3 class="mission-title" style="font-family:'Playfair Display',serif;font-size:1.3rem;margin:0 0 8px;color:#3b1a12;">
+                    <h3 class="mission-title" style="font-family:'Playfair Display',serif;font-size:clamp(1.1rem, 3vw, 1.3rem);margin:0 0 8px;color:#3b1a12;">
                         Our Mission
                     </h3>
-                    <p class="mission-text" style="font-size:0.95rem;color:#555;line-height:1.7;margin:0;">
+                    <p class="mission-text" style="font-size:clamp(0.9rem, 2vw, 0.95rem);color:#555;line-height:1.7;margin:0;">
                         To provide exceptional hospitality experiences that celebrate Zimbabwean culture 
                         while delivering world-class comfort and service. We strive to create memorable 
                         moments for every guest through attention to detail, authentic warmth, and unwavering 
@@ -110,28 +110,28 @@
                 </div>
 
                 <div class="mission-card" data-aos="flip-left" data-aos-delay="200" style="background:#ffffff;border-radius:18px;padding:26px 24px;box-shadow:0 18px 45px rgba(0,0,0,0.06);">
-                    <div class="mission-icon" style="font-size:2rem;color:#f3b01a;margin-bottom:10px;">
+                    <div class="mission-icon" style="font-size:clamp(1.6rem, 3vw, 2rem);color:#f3b01a;margin-bottom:10px;">
                         <i class="fas fa-eye"></i>
                     </div>
-                    <h3 class="mission-title" style="font-family:'Playfair Display',serif;font-size:1.3rem;margin:0 0 8px;color:#3b1a12;">
+                    <h3 class="mission-title" style="font-family:'Playfair Display',serif;font-size:clamp(1.1rem, 3vw, 1. 3rem);margin:0 0 8px;color:#3b1a12;">
                         Our Vision
                     </h3>
-                    <p class="mission-text" style="font-size:0.95rem;color:#555;line-height:1.7;margin:0;">
+                    <p class="mission-text" style="font-size:clamp(0.9rem, 2vw, 0.95rem);color:#555;line-height:1.7;margin:0;">
                         To be recognized as Zimbabwe's leading boutique lodge, setting the standard for 
-                        authentic African hospitality. We aspire to expand our legacy while maintaining 
+                        authentic African hospitality.  We aspire to expand our legacy while maintaining 
                         the intimate, personalized service that has defined The Village Lodge for over 
                         a decade.
                     </p>
                 </div>
 
                 <div class="mission-card" data-aos="flip-left" data-aos-delay="300" style="background:#ffffff;border-radius:18px;padding:26px 24px;box-shadow:0 18px 45px rgba(0,0,0,0.06);">
-                    <div class="mission-icon" style="font-size:2rem;color:#f3b01a;margin-bottom:10px;">
+                    <div class="mission-icon" style="font-size:clamp(1.6rem, 3vw, 2rem);color:#f3b01a;margin-bottom:10px;">
                         <i class="fas fa-heart"></i>
                     </div>
-                    <h3 class="mission-title" style="font-family:'Playfair Display',serif;font-size:1.3rem;margin:0 0 8px;color:#3b1a12;">
+                    <h3 class="mission-title" style="font-family:'Playfair Display',serif;font-size:clamp(1.1rem, 3vw, 1. 3rem);margin:0 0 8px;color:#3b1a12;">
                         Our Values
                     </h3>
-                    <p class="mission-text" style="font-size:0.95rem;color:#555;line-height:1.7;margin:0;">
+                    <p class="mission-text" style="font-size:clamp(0.9rem, 2vw, 0. 95rem);color:#555;line-height:1.7;margin:0;">
                         Excellence, authenticity, and community drive everything we do. We believe in 
                         sustainable tourism, supporting local communities, and preserving Zimbabwean 
                         heritage while creating employment opportunities and fostering economic growth 
@@ -143,19 +143,19 @@
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="why-choose-section section-padding" style="background:#ffffff;">
+    <section class="why-choose-section section-padding" style="background:#ffffff;padding:60px 0;">
         <div class="section">
             <div class="section-header text-center" data-aos="fade-up">
-                <span class="section-subtitle" style="font-size:0.85rem;letter-spacing:0.25em;text-transform:uppercase;color:#3b1a12;opacity:0.8;">
+                <span class="section-subtitle" style="font-size:clamp(0.75rem, 2vw, 0.85rem);letter-spacing:0.25em;text-transform:uppercase;color:#3b1a12;opacity:0.8;">
                     Why Choose Us
                 </span>
-                <h2 class="section-title" style="font-family:'Playfair Display',serif;font-size:2rem;margin:10px 0;color:#3b1a12;">
+                <h2 class="section-title" style="font-family:'Playfair Display',serif;font-size:clamp(1. 6rem, 4vw, 2rem);margin:10px 0;color:#3b1a12;">
                     What Sets Us Apart
                 </h2>
                 <div class="title-divider center" style="width:60px;height:3px;background:#f3b01a;border-radius:999px;margin:10px auto 14px;"></div>
-                <p class="section-description" style="max-width:620px;margin:0 auto;font-size:0.96rem;color:#555;">
+                <p class="section-description" style="max-width:620px;margin:0 auto;font-size:clamp(0.9rem, 2vw, 0.96rem);color:#555;padding:0 10px;">
                     Discover the distinctive features that make The Village Lodge your premier choice 
-                    for accommodation and events in Gweru.
+                    for accommodation and events in Gweru. 
                 </p>
             </div>
 
@@ -203,13 +203,13 @@
 
                 @foreach($whyItems as $item)
                     <div class="why-choose-item" data-aos="fade-up" data-aos-delay="{{ $item['delay'] }}" style="background:#f7f8f9;border-radius:16px;padding:22px 20px;border:1px solid rgba(0,0,0,0.03);box-shadow:0 10px 30px rgba(0,0,0,0.04);">
-                        <div class="choose-icon" style="font-size:1.6rem;color:#f3b01a;margin-bottom:10px;">
+                        <div class="choose-icon" style="font-size:clamp(1.4rem, 3vw, 1.6rem);color:#f3b01a;margin-bottom:10px;">
                             <i class="fas {{ $item['icon'] }}"></i>
                         </div>
-                        <h4 class="choose-title" style="font-family:'Playfair Display',serif;font-size:1.2rem;margin:0 0 6px;color:#3b1a12;">
+                        <h4 class="choose-title" style="font-family:'Playfair Display',serif;font-size:clamp(1rem, 2. 5vw, 1.2rem);margin:0 0 6px;color:#3b1a12;">
                             {{ $item['title'] }}
                         </h4>
-                        <p class="choose-text" style="font-size:0.94rem;color:#555;line-height:1.7;margin:0;">
+                        <p class="choose-text" style="font-size:clamp(0.85rem, 2vw, 0.94rem);color:#555;line-height:1.7;margin:0;">
                             {{ $item['text'] }}
                         </p>
                     </div>
@@ -219,59 +219,59 @@
     </section>
 
     <!-- Statistics Section -->
-    <section class="statistics-section" style="position:relative;padding:70px 0;background:url('{{ asset('images/image06.jpg') }}') center/cover no-repeat;">
-        {{-- <div class="statistics-overlay" style="position:absolute;inset:0;background:rgba(15,4,2,0.92);"></div> --}}
+    <section class="statistics-section" style="position:relative;padding:clamp(50px, 10vw, 70px) 0;background:url('{{ asset('images/image06.jpg') }}') center/cover no-repeat;background-attachment:fixed;">
+        <div class="statistics-overlay" style="position:absolute;inset:0;background:rgba(15,4,2,0.82);"></div>
         <div class="section" style="position:relative;">
-            <div class="statistics-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;">
+            <div class="statistics-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:clamp(16px, 4vw, 24px);padding:0 10px;">
                 <div class="stat-item" data-aos="zoom-in" data-aos-delay="100" style="text-align:center;color:#fff;">
-                    <div class="stat-icon" style="font-size:1.6rem;color:#f3b01a;margin-bottom:6px;">
+                    <div class="stat-icon" style="font-size:clamp(1.4rem, 3vw, 1.6rem);color:#f3b01a;margin-bottom:6px;">
                         <i class="fas fa-calendar-check"></i>
                     </div>
-                    <div class="stat-number" data-target="15" style="font-size:1.9rem;font-weight:700;margin-bottom:4px;">0</div>
-                    <div class="stat-label" style="font-size:0.9rem;opacity:0.8;">Years of Excellence</div>
+                    <div class="stat-number" data-target="15" style="font-size:clamp(1.6rem, 4vw, 1.9rem);font-weight:700;margin-bottom:4px;">0</div>
+                    <div class="stat-label" style="font-size:clamp(0.8rem, 2vw, 0.9rem);opacity:0.8;">Years of Excellence</div>
                 </div>
 
                 <div class="stat-item" data-aos="zoom-in" data-aos-delay="200" style="text-align:center;color:#fff;">
-                    <div class="stat-icon" style="font-size:1.6rem;color:#f3b01a;margin-bottom:6px;">
+                    <div class="stat-icon" style="font-size:clamp(1.4rem, 3vw, 1.6rem);color:#f3b01a;margin-bottom:6px;">
                         <i class="fas fa-users"></i>
                     </div>
-                    <div class="stat-number" data-target="10000" style="font-size:1.9rem;font-weight:700;margin-bottom:4px;">0</div>
-                    <div class="stat-label" style="font-size:0.9rem;opacity:0.8;">Happy Guests</div>
+                    <div class="stat-number" data-target="10000" style="font-size:clamp(1.6rem, 4vw, 1.9rem);font-weight:700;margin-bottom:4px;">0</div>
+                    <div class="stat-label" style="font-size:clamp(0.8rem, 2vw, 0.9rem);opacity:0.8;">Happy Guests</div>
                 </div>
 
                 <div class="stat-item" data-aos="zoom-in" data-aos-delay="300" style="text-align:center;color:#fff;">
-                    <div class="stat-icon" style="font-size:1.6rem;color:#f3b01a;margin-bottom:6px;">
+                    <div class="stat-icon" style="font-size:clamp(1.4rem, 3vw, 1.6rem);color:#f3b01a;margin-bottom:6px;">
                         <i class="fas fa-door-open"></i>
                     </div>
-                    <div class="stat-number" data-target="45" style="font-size:1.9rem;font-weight:700;margin-bottom:4px;">0</div>
-                    <div class="stat-label" style="font-size:0.9rem;opacity:0.8;">Luxury Rooms</div>
+                    <div class="stat-number" data-target="45" style="font-size:clamp(1.6rem, 4vw, 1.9rem);font-weight:700;margin-bottom:4px;">0</div>
+                    <div class="stat-label" style="font-size:clamp(0.8rem, 2vw, 0.9rem);opacity:0.8;">Luxury Rooms</div>
                 </div>
 
                 <div class="stat-item" data-aos="zoom-in" data-aos-delay="400" style="text-align:center;color:#fff;">
-                    <div class="stat-icon" style="font-size:1.6rem;color:#f3b01a;margin-bottom:6px;">
+                    <div class="stat-icon" style="font-size:clamp(1.4rem, 3vw, 1.6rem);color:#f3b01a;margin-bottom:6px;">
                         <i class="fas fa-award"></i>
                     </div>
-                    <div class="stat-number" data-target="25" style="font-size:1.9rem;font-weight:700;margin-bottom:4px;">0</div>
-                    <div class="stat-label" style="font-size:0.9rem;opacity:0.8;">Awards Won</div>
+                    <div class="stat-number" data-target="25" style="font-size:clamp(1.6rem, 4vw, 1. 9rem);font-weight:700;margin-bottom:4px;">0</div>
+                    <div class="stat-label" style="font-size:clamp(0.8rem, 2vw, 0.9rem);opacity:0.8;">Awards Won</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section class="team-section section-padding bg-light" style="background:#f5f6f7;">
+    <section class="team-section section-padding bg-light" style="background:#f5f6f7;padding:60px 0;">
         <div class="section">
             <div class="section-header text-center" data-aos="fade-up">
-                <span class="section-subtitle" style="font-size:0.85rem;letter-spacing:0.25em;text-transform:uppercase;color:#3b1a12;opacity:0.8;">
+                <span class="section-subtitle" style="font-size:clamp(0.75rem, 2vw, 0.85rem);letter-spacing:0.25em;text-transform:uppercase;color:#3b1a12;opacity:0.8;">
                     Meet The Team
                 </span>
-                <h2 class="section-title" style="font-family:'Playfair Display',serif;font-size:2rem;margin:10px 0;color:#3b1a12;">
+                <h2 class="section-title" style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem, 4vw, 2rem);margin:10px 0;color:#3b1a12;">
                     Our Dedicated Staff
                 </h2>
                 <div class="title-divider center" style="width:60px;height:3px;background:#f3b01a;border-radius:999px;margin:10px auto 14px;"></div>
-                <p class="section-description" style="max-width:620px;margin:0 auto;font-size:0.96rem;color:#555;">
+                <p class="section-description" style="max-width:620px;margin:0 auto;font-size:clamp(0.9rem, 2vw, 0.96rem);color:#555;padding:0 10px;">
                     The heart of The Village Lodge is our passionate team committed to making 
-                    your stay unforgettable.
+                    your stay unforgettable. 
                 </p>
             </div>
 
@@ -311,21 +311,21 @@
 
                 @foreach($team as $member)
                     <div class="team-member" data-aos="fade-up" data-aos-delay="{{ $member['delay'] }}" style="background:#ffffff;border-radius:18px;overflow:hidden;box-shadow:0 16px 45px rgba(0,0,0,0.06);">
-                        <div class="member-image" style="position:relative;overflow:hidden;">
-                            <img src="{{ asset('images/'.$member['image']) }}" alt="{{ $member['name'] }}" style="width:100%;height:240px;object-fit:cover;display:block;">
+                        <div class="member-image" style="position:relative;overflow:hidden;height:240px;">
+                            <img src="{{ asset('images/'.$member['image']) }}" alt="{{ $member['name'] }}" style="width:100%;height:100%;object-fit:cover;display:block;">
                             <div class="member-social" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(15,4,2,0.9),transparent);display:flex;align-items:flex-end;justify-content:flex-start;gap:8px;padding:12px;opacity:0;transition:opacity 0.25s ease;">
                                 @foreach($member['social'] as $icon)
-                                    <a href="#" style="width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,0.7);display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.8rem;">
+                                    <a href="#" style="width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,0.7);display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.8rem;text-decoration:none;">
                                         <i class="fab fa-{{ $icon }}"></i>
                                     </a>
                                 @endforeach
                             </div>
                         </div>
                         <div class="member-info" style="padding:14px 16px 16px;text-align:center;">
-                            <h4 class="member-name" style="font-family:'Playfair Display',serif;font-size:1.1rem;margin:0 0 4px;color:#3b1a12;">
+                            <h4 class="member-name" style="font-family:'Playfair Display',serif;font-size:clamp(1rem, 2. 5vw, 1.1rem);margin:0 0 4px;color:#3b1a12;">
                                 {{ $member['name'] }}
                             </h4>
-                            <span class="member-position" style="font-size:0.9rem;color:#777;">{{ $member['position'] }}</span>
+                            <span class="member-position" style="font-size:clamp(0.85rem, 2vw, 0.9rem);color:#777;">{{ $member['position'] }}</span>
                         </div>
                     </div>
                 @endforeach
@@ -334,22 +334,22 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section" style="position:relative;padding:70px 0;background:url('{{ asset('events/event01.jpg') }}') center/cover no-repeat;">
-        {{-- <div class="cta-overlay" style="position:absolute;inset:0;background:rgba(15,4,2,0.9);"></div> --}}
-        <div class="section" style="position:relative;text-align:center;color:#fff;">
+    <section class="cta-section" style="position:relative;padding:clamp(50px, 10vw, 70px) 0;background:url('{{ asset('events/event01.jpg') }}') center/cover no-repeat;background-attachment:fixed;">
+        <div class="cta-overlay" style="position:absolute;inset:0;background:rgba(15,4,2,0.82);"></div>
+        <div class="section" style="position:relative;text-align:center;color:#fff;padding:0 10px;">
             <div class="cta-content" data-aos="fade-up">
-                <h2 class="cta-title" style="font-family:'Playfair Display',serif;font-size:2.2rem;margin:0 0 10px;">
+                <h2 class="cta-title" style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem, 5vw, 2. 2rem);margin:0 0 10px;">
                     Experience The Village Lodge Difference
                 </h2>
-                <p class="cta-description" style="font-size:0.98rem;max-width:540px;margin:0 auto 20px;opacity:0.9;">
-                    Book your stay today and discover why guests return to us year after year.
+                <p class="cta-description" style="font-size:clamp(0.9rem, 2vw, 0.98rem);max-width:540px;margin:0 auto 20px;opacity:0.9;">
+                    Book your stay today and discover why guests return to us year after year. 
                 </p>
-                <div class="cta-buttons" style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-                    <a href="{{ route('contact') }}" class="btn-lux" style="padding:11px 22px;font-size:0.9rem;">
+                <div class="cta-buttons" style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;flex-direction:column;gap:10px;">
+                    <a href="{{ route('contact') }}" class="btn-lux" style="padding:11px 22px;font-size:clamp(0. 85rem, 2vw, 0.9rem);width:100%;max-width:300px;margin:0 auto;display:flex;align-items:center;justify-content:center;">
                         <i class="fas fa-calendar-check"></i>
                         <span>Book Now</span>
                     </a>
-                    <a href="{{ route('rooms') }}" class="btn-ghost" style="border-color:rgba(255,255,255,0.7);padding:10px 20px;font-size:0.9rem;">
+                    <a href="{{ route('rooms') }}" class="btn-ghost" style="border-color:rgba(255,255,255,0.7);padding:10px 20px;font-size:clamp(0.85rem, 2vw, 0.9rem);width:100%;max-width:300px;margin:0 auto;display:flex;align-items:center;justify-content:center;">
                         <i class="fas fa-bed"></i>
                         <span>View Rooms</span>
                     </a>
@@ -375,10 +375,10 @@
         const timer = setInterval(() => {
             current += increment;
             if (current >= target) {
-                element.textContent = target.toLocaleString() + '+';
+                element.textContent = target. toLocaleString() + '+';
                 clearInterval(timer);
             } else {
-                element.textContent = Math.floor(current).toLocaleString();
+                element.textContent = Math.floor(current). toLocaleString();
             }
         }, frame);
     }
@@ -387,7 +387,7 @@
     const statsSection = document.querySelector('.statistics-section');
     if (statsSection) {
         const counterObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
+            entries. forEach(entry => {
                 if (entry.isIntersecting) {
                     const counters = entry.target.querySelectorAll('.stat-number');
                     counters.forEach(counter => animateCounter(counter));
@@ -400,14 +400,19 @@
     }
 
     // Team social hover
-    document.querySelectorAll('.team-member .member-image').forEach(wrapper => {
+    document.querySelectorAll('. team-member . member-image').forEach(wrapper => {
         const social = wrapper.querySelector('.member-social');
-        if (!social) return;
+        if (! social) return;
         wrapper.addEventListener('mouseenter', () => {
             social.style.opacity = '1';
         });
         wrapper.addEventListener('mouseleave', () => {
             social.style.opacity = '0';
+        });
+
+        // Mobile tap support
+        wrapper.addEventListener('touchstart', () => {
+            social.style.opacity = social.style.opacity === '1' ? '0' : '1';
         });
     });
 </script>
